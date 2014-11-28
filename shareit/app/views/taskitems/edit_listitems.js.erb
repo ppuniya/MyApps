@@ -1,0 +1,1 @@
+jQuery("#listbox").html("<%= escape_javascript(render partial: 'taskitemslist', :locals=>{:list=>@list, :taskitems=>@list.taskitems})%>");

@@ -1,0 +1,40 @@
+<%= render :partial=>"navviews/universalnav", :locals=>{navstat: "li"}%>
+
+<div class="page-header">
+<h1>Start a new list</h1>
+</div>
+
+<div class="row">
+	<div id="listdetails" class="col-sm-4">
+		<% if @inputView == "list" %>
+		<h4 class="lead">List Details</h4>
+		<%= form_for @list, :url=>{:action=>"create"}, :remote=>true do |l|%>
+			
+			<div class="form-group">
+			<%= l.label "List Type", :class=>"control-label" %>
+			<%= l.select(:listtype, List::LIST_TYPES , {:prompt=>true}, {:class=>"form-control"})%>
+			</div>
+			
+			<div class="form-group">
+			<%= l.label "List Title", :class=>"control-label"%>
+			<%= l.text_field :title, :class=>"form-control" %>
+			</div>
+			
+			<div class="form-group">
+			<%= l.label "List Description", :class=>"control-label" %>
+			<%= l.text_area :description, :class=>"form-control" %>
+			</div>
+
+			<div class="form-group">
+			<%= l.submit "Add Members", {:class=>"btn btn-primary"}%>
+			</div>
+		<% end %>
+		<% end %>
+	</div>
+	<div id="listbox" class="col-sm-8">
+	</div>
+</div>
+<hr>
+<div class="text-center">
+	<%= link_to "Done with List", {:controller=>"boards", :action=>"index"}, :class=>"btn btn-default"%>
+</div>

@@ -1,0 +1,29 @@
+<div id="boardlists" class='board_container container' data-update-url='/boardlists/sort'>
+	<% if boardlists %>
+	<% boardlists.each do |bl| %>
+	
+		<div id="boardlist_<%= bl.id%>" class="col-sm-6 panel panel-default">
+			
+			<div class="board_list_header panel-heading">
+			<div class="panel-title">
+			<%= bl.list.title%>
+			<div class="pull-right">
+			<%= link_to ('<span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>').html_safe, {:controller=>"lists", :action=>"show", :id=>bl.list.id}, :title=>"View this list" %>&nbsp;|&nbsp;
+			<% if bl.board.boardtype == "pending" || bl.board.boardtype == "inactive"%>
+				<%= link_to ('<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>').html_safe, {:controller=>"boardlists", :action=>"accept", :id=>bl.id}, :title=>"Move this list to active board" %>&nbsp;&nbsp;
+			<% end %>
+			<% if bl.board.boardtype == "priority" %>
+				<%= link_to ('<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>').html_safe, {:controller=>"lists", :action=>"edit", :id=>bl.list.id}, :title=>"Edit this list" %>&nbsp;|&nbsp;
+				<%= link_to ('<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>').html_safe, {:controller=>"boardlists", :action=>"reject", :id=>bl.id}, :title=>"Deactivate this list" %>&nbsp;&nbsp;
+			<% end %>
+			</div>
+			</div>
+			</div>
+			
+			<div class="board_list_content">
+				<%= render :partial=>"list", :locals=>{:boardlist=>bl} %>
+			</div>
+		</div>
+	<% end %>
+	<% end %>
+</div>

@@ -1,0 +1,6 @@
+<td><span class="text-nowrap"><%= blist.board.user.fullname%></span></td>
+<td><span class="text-nowrap"><%= blist.board.user.email %></span></td>
+<td><span class="text-nowrap"><%= blist.perms %></span></td>
+<td><span class="text-nowrap"><%= link_to ('M<span class="glyphicon glyphicon-resize-horizontal" aria-hidden="true"></span>A').html_safe, {:controller=>"boardlists", :action=>"update", :id=>blist.id}, :remote=>true, :method=>:patch, :title=>"Switch Member/Admin.", :class=>"btn btn-warning"%>
+	<%= link_to ('<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>').html_safe, {:controller=>"boardlists", :action=>"destroy", :id=>blist.id}, :remote=>true, :method=>:delete, data: {:confirm=>"Are you sure you want to delete this list member?"}, :class=>"btn btn-danger" %>
+</span></td>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  abbr: MyString
+  city: MyString
+  estd: 2014-11-20 11:28:02
+  conf: MyString
+  div: MyString
+
+two:
+  abbr: MyString
+  city: MyString
+  estd: 2014-11-20 11:28:02
+  conf: MyString
+  div: MyString

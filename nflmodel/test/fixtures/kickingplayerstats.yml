@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_id: 
+  team_id: 
+  player_id: 
+  fgm: 1
+  fga: 1
+  totpfg: 1
+  xpmade: 1
+  xpmissed: 1
+  xpa: 1
+  xpb: 1
+  xptot: 1
+
+two:
+  game_id: 
+  team_id: 
+  player_id: 
+  fgm: 1
+  fga: 1
+  totpfg: 1
+  xpmade: 1
+  xpmissed: 1
+  xpa: 1
+  xpb: 1
+  xptot: 1

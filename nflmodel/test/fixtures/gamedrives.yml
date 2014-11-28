@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_id: 
+  team_id: 
+  qtr: 1
+  redzone: false
+  fds: 1
+  result: MyString
+  penyds: 1
+  ydsgained: 1
+  numplays: 1
+  postime: 2014-11-20 12:03:47
+  starttime: 2014-11-20 12:03:47
+  endtime: 2014-11-20 12:03:47
+  startpos: 1
+  endpos: 1
+  crntdrv: 1
+
+two:
+  game_id: 
+  team_id: 
+  qtr: 1
+  redzone: false
+  fds: 1
+  result: MyString
+  penyds: 1
+  ydsgained: 1
+  numplays: 1
+  postime: 2014-11-20 12:03:47
+  starttime: 2014-11-20 12:03:47
+  endtime: 2014-11-20 12:03:47
+  startpos: 1
+  endpos: 1
+  crntdrv: 1

@@ -1,0 +1,17 @@
+<thead>
+<tr>
+	<th>Name</th>
+	<th>Details</th>
+	<th>Quantity</th>
+	<th>Unit Type</th>
+	<th>Unit Cost</th>
+	<th>Best Price Found</th>
+	<th>Best Price Store</th>
+	<th>Update/Delete</th>
+</tr>
+</thead>
+<% shoppingitems.each do |it| %>
+	<tr id="shoppingitem_<%=it.id%>">
+		<%= render :partial=>"/shoppingitems/shoppingitem", :locals=>{:item=>it}%>
+	</tr>
+<% end %>

@@ -1,0 +1,190 @@
+TEAM:
+has_many : PLAYERS
+has_many : GAMES
+id : integer
+abbr : string
+city : string
+since : datetime
+------------------
+PLAYER:
+has_one : TEAM
+has_many : GAMES
+id : integer
+name : string
+position : string
+since : datetime
+------------------
+GAME:
+HAS_ONE: HOMETEAM
+HAS_ONE: AWAYTEAM
+id : integer
+weather : string
+media : string
+yl : string
+qtr : string
+note : string
+down : integer
+togo : integer
+redzone : boolean
+clock : Time
+posteam : String
+stadium: string
+--------------------
+TEAMSCORE:
+belongs_to : GAME
+belongs_to : TEAM
+1 : integer
+2 : integer
+3 : integer
+4 : integer
+5 : integer
+T : integer
+-------------------
+TEAMSTATS:
+belongs_to : GAME
+belongs_to : TEAM
+to : int -- timeouts left
+totfd : int
+totyds : int
+pyds : int
+ryds : int
+pen : int
+penyds : int
+trnovr : int
+pt : int
+ptyds : int
+ptavg : int
+top : Time
+---------------------
+PASSINGPLAYERSTATS:
+belongs_to : GAME
+belongs_to : TEAM
+belongs_to : PLAYER
+att : integer
+comp : integer
+yds : integer
+tds : integer
+ints : integer
+twopta : integer
+twoptm : integer
+-------------------
+RUSHINGPLAYERSTATS:
+belongs_to : GAME
+belongs_to : TEAM
+belongs_to : PLAYER
+att : integer
+yds : integer
+tds : integer
+lng : integer
+lngtd : integer
+twopta : integer
+twoptm : integer
+-----------------
+RECEIVINGPLAYERSTATS:
+belongs_to : GAME
+belongs_to : TEAM
+belongs_to : PLAYER
+rec : integer
+yds : integer
+tds : integer
+lng : integer
+lngtd : integer
+twopta : integer
+twoptm : integer
+------------------
+KICKINGPLAYERSTATS:
+belongs_to : GAME
+belongs_to : TEAM
+belongs_to : PLAYER
+fgm : int
+fga : int
+totpfg : int
+xpmade : int
+xpmissed : int
+xpa : int
+xpb : int
+xptot : int
+-----------------
+PUNTINGPLAYERSTATS:
+belongs_to : GAME
+belongs_to : TEAM
+belongs_to : PLAYER
+pts : int
+yds : int
+avg : int
+i20 : int
+lng : int
+------------------
+KICKRETURNPLAYERSTATS:
+belongs_to : GAME
+belongs_to : TEAM
+belongs_to : PLAYER
+ret : int
+avg : int
+tds : int
+lng : int
+lngtd : int
+---------------------
+PUNTRETURNPLAYERSTATS:
+belongs_to : GAME
+belongs_to : TEAM
+belongs_to : PLAYER
+ret : int
+avg : int
+tds : int
+lng : int
+lngtd : int
+---------------------
+DEFENSEPLAYERSTATS:
+belongs_to : GAME
+belongs_to : TEAM
+belongs_to : PLAYER
+tkl : int
+ast : int
+sk : int
+int : int
+ffum : int
+---------------------
+GAMEDRIVE
+belongs_to : GAME
+belongs_to : TEAM
+qtr : int
+redzone : bool
+fds : int
+result : string
+penyds : int
+ydsgained : int
+numplays : int
+postime : Time
+start_time : Time
+end_time : Time
+startPos : int
+endPos : int
+crntdrv : int
+---------------------
+GAMEDRIVEPLAY
+belongs_to : GAMEDRIVE
+sp : int
+qtr : int
+down : int
+time : Time
+yrdln : int
+ydstogo : int
+ydsnet : int
+desc : string
+note : string
+---------------------
+PLAYERDRIVEPLAY
+belongs_to : GAMEDRIVEPLAY
+belongs_to : PLAYER
+belongs_to : TEAM
+stat_id : int
+yards : int
+----------------------
+GAMESCORESUMMARY
+belongs_to : GAME
+belongs_to : TEAM
+type : string
+desc : string
+qtr : int
+----------------------

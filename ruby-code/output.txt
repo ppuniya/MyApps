@@ -1,0 +1,196 @@
+<div class="bd">
+                        <div class="events-carousel">
+        <div class="event-label"><span class="up-next"><span>Up Next</span></span></div>
+        <a class="next browse right"><span>Next</span></a>
+        <div class="event-scrollable">
+            <div class="event-items">
+                <ul>
+                    <li>
+                        <span class="event-type"></span>
+                        <a href="" title="">
+                            <span class="event-title"></span>
+                            <span class="event-date">
+                                <span class="event-day"></span>
+                                <span class="event-time"></span>
+                            </span>
+                            <span class="event-link-type"></span>
+                        </a>
+                        <span class="event-description">There are no Events to display in this category.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a class="prev browse left"><span>Prev</span></a>
+        <div class="action-bar">
+            <span class="event-details">
+                <a href="http://www.denverbroncos.com/schedule-and-events/events-calendar.html" title="View More Events">
+                    <span>View More Events <span class="link-carets">»</span></span>
+                </a>
+            </span>
+            <span class="event-toggle">
+                <a href="http://www.denverbroncos.com/schedule-and-events/events-calendar.html" title="Show More" class="show-more"><span>Show More</span></a>
+                <a href="http://www.denverbroncos.com/schedule-and-events/events-calendar.html" title="Close" class="close"><span>Close</span></a>
+            </span>
+        </div>
+    </div>
+    <div class="events-list">
+        <div class="on-now-events">
+            <div class="event-label"><span class="on-now"><span>On Now</span></span></div>
+            <ul>
+                </ul>
+        </div>
+        <div class="coming-up-events">
+            <div class="event-label"><span class="coming-up"><span>Coming Up</span></span></div>
+            <ul>
+                <li data-start-time="1416920400000" data-end-time="1416956400000" class="event clearfix  loop-first  loop-odd ">
+                                <span class="event-date">
+                                    <span class="event-day">Tue., Nov. 25, 2014</span>
+                                    <span class="event-time">
+                                        6:00 AM
+                                                - 4:00 PM MST</span>
+                                </span>
+                                <span class="event-details">
+                                    <span class="event-type"></span>
+                                    <span class="event-title">
+                                        <a href="http://www.denverbroncos.com/schedule-and-events/event/Thanksgiving-Turkey-Distribution-201411250600/7de1513a-3ff8-4467-aafd-c64f6524a25d" title="Thanksgiving Turkey Distribution"><span>Thanksgiving Turkey Distribution</span></a>
+                                            </span>
+                                    <span class="event-description">Denver Rescue Mission Annual Thanksgiving Turkey Distribution <br></span>
+                                </span>
+                            </li>
+                        <li data-start-time="1417397400000" data-end-time="" class="event clearfix  loop-even ">
+                                <span class="event-date">
+                                    <span class="event-day">Sun., Nov. 30, 2014</span>
+                                    <span class="event-time">
+                                        6:30 PM MST</span>
+                                </span>
+                                <span class="event-details">
+                                    <span class="event-type"></span>
+                                    <span class="event-title">
+                                        <a href="http://www.denverbroncos.com/schedule-and-events/event/Denver-Broncos-at-Kansas-City-Chiefs-201411301830/4c488021-5bfe-471f-86f9-7fa0776189fe" title="Denver Broncos at Kansas City Chiefs"><span>Denver Broncos at Kansas City Chiefs</span></a>
+                                            </span>
+                                    <span class="event-description">The Denver Broncos travel to Arrowhead Stadium to face AFC West foe the Kansas City Chiefs on Sunday Night Football on NBC.</span>
+                                </span>
+                            </li>
+                        <li data-start-time="1417986300000" data-end-time="" class="event clearfix  loop-odd ">
+                                <span class="event-date">
+                                    <span class="event-day">Sun., Dec. 07, 2014</span>
+                                    <span class="event-time">
+                                        2:05 PM MST</span>
+                                </span>
+                                <span class="event-details">
+                                    <span class="event-type"></span>
+                                    <span class="event-title">
+                                        <a href="http://www.denverbroncos.com/schedule-and-events/event/Play-60/Fuel-Up-to-Play-60-Tribute-Game-201412071405/46661fc4-8ff8-4547-b198-f6b67527eb20" title="Play 60/Fuel Up to Play 60 Tribute Game"><span>Play 60/Fuel Up to Play 60 Tribute Game</span></a>
+                                            </span>
+                                    <span class="event-description">Play 60/Fuel Up to Play 60 tribute game. Teams will be recognized before the team's game against the Buffalo Bills.<br></span>
+                                </span>
+                            </li>
+                        <li data-start-time="1417986300000" data-end-time="" class="event clearfix  loop-even ">
+                                <span class="event-date">
+                                    <span class="event-day">Sun., Dec. 07, 2014</span>
+                                    <span class="event-time">
+                                        2:05 PM MST</span>
+                                </span>
+                                <span class="event-details">
+                                    <span class="event-type"></span>
+                                    <span class="event-title">
+                                        <a href="http://www.denverbroncos.com/schedule-and-events/event/Denver-Broncos-vs.-Buffalo-Bills-201412071405/d1dfa773-00d9-4958-b19d-a9ae23c35342" title="Denver Broncos vs. Buffalo Bills"><span>Denver Broncos vs. Buffalo Bills</span></a>
+                                            </span>
+                                    <span class="event-description">The Denver Broncos host the AFC East Buffalo Bills at Sports Authority Field at Mile High. The game will be broadcast on CBS.</span>
+                                </span>
+                            </li>
+                        <li data-start-time="1418086800000" data-end-time="" class="event clearfix  loop-odd ">
+                                <span class="event-date">
+                                    <span class="event-day">Mon., Dec. 08, 2014</span>
+                                    <span class="event-time">
+                                        6:00 PM MST</span>
+                                </span>
+                                <span class="event-details">
+                                    <span class="event-type"></span>
+                                    <span class="event-title">
+                                        <a href="http://www.denverbroncos.com/schedule-and-events/event/Annual-Thunder-Christmas-Party-201412081800/6d7d7475-e24b-410f-91e5-0820c56790ab" title="Annual Thunder Christmas Party"><span>Annual Thunder Christmas Party</span></a>
+                                            </span>
+                                    <span class="event-description">Annual Thunder Christmas Party for Boys &amp; Girls Clubs of Metro Denver</span>
+                                </span>
+                            </li>
+                        <li data-start-time="1418173200000" data-end-time="" class="event clearfix  loop-even ">
+                                <span class="event-date">
+                                    <span class="event-day">Tue., Dec. 09, 2014</span>
+                                    <span class="event-time">
+                                        6:00 PM MST</span>
+                                </span>
+                                <span class="event-details">
+                                    <span class="event-type"></span>
+                                    <span class="event-title">
+                                        <a href="http://www.denverbroncos.com/schedule-and-events/event/Annual-Denver-Rescue-Mission-Holiday-Party-201412091800/b8abfd7f-923f-4b7f-a939-06f1381216c4" title="Annual Denver Rescue Mission Holiday Party"><span>Annual Denver Rescue Mission Holiday Party</span></a>
+                                            </span>
+                                    <span class="event-description">Annual Denver Rescue Mission Holiday Party</span>
+                                </span>
+                            </li>
+                        <li data-start-time="1418591100000" data-end-time="" class="event clearfix  loop-odd ">
+                                <span class="event-date">
+                                    <span class="event-day">Sun., Dec. 14, 2014</span>
+                                    <span class="event-time">
+                                        2:05 PM MST</span>
+                                </span>
+                                <span class="event-details">
+                                    <span class="event-type"></span>
+                                    <span class="event-title">
+                                        <a href="http://www.denverbroncos.com/schedule-and-events/event/Denver-Broncos-at-San-Diego-Chargers-201412141405/8eaff194-d469-49f2-b8e9-92c475ef8d16" title="Denver Broncos at San Diego Chargers"><span>Denver Broncos at San Diego Chargers</span></a>
+                                            </span>
+                                    <span class="event-description">The Denver Broncos travel to Qualcomm Stadium to take on the San Diego Chargers. The game will be broadcast on CBS.</span>
+                                </span>
+                            </li>
+                        <li data-start-time="1419298200000" data-end-time="" class="event clearfix  loop-even ">
+                                <span class="event-date">
+                                    <span class="event-day">Mon., Dec. 22, 2014</span>
+                                    <span class="event-time">
+                                        6:30 PM MST</span>
+                                </span>
+                                <span class="event-details">
+                                    <span class="event-type"></span>
+                                    <span class="event-title">
+                                        <a href="http://www.denverbroncos.com/schedule-and-events/event/Denver-Broncos-at-Cincinnati-Bengals-201412221830/7cf5cc96-77c0-4bf0-a545-35da64065d6d" title="Denver Broncos at Cincinnati Bengals"><span>Denver Broncos at Cincinnati Bengals</span></a>
+                                            </span>
+                                    <span class="event-description">The Denver Broncos travel to Paul Brown Stadium to face the Cincinnati Bengals on ESPN's Monday Night Football.</span>
+                                </span>
+                            </li>
+                        <li data-start-time="1419801900000" data-end-time="" class="event clearfix  loop-odd ">
+                                <span class="event-date">
+                                    <span class="event-day">Sun., Dec. 28, 2014</span>
+                                    <span class="event-time">
+                                        2:25 PM MST</span>
+                                </span>
+                                <span class="event-details">
+                                    <span class="event-type"></span>
+                                    <span class="event-title">
+                                        <a href="http://www.denverbroncos.com/schedule-and-events/event/Annual-Denver-Broncos-Salute-to-High-School-Football-201412281425/aca44684-66c9-4e49-835e-cf6b6f869d3d" title="Annual Denver Broncos Salute to High School Football"><span>Annual Denver Broncos Salute to High School Football</span></a>
+                                            </span>
+                                    <span class="event-description">Annual Denver Broncos Salute to High School Football, recognizing the High School State Champions, Coaches of the Week and High School Games of the Week.</span>
+                                </span>
+                            </li>
+                        <li data-start-time="1419801900000" data-end-time="" class="event clearfix  loop-even  loop-last ">
+                                <span class="event-date">
+                                    <span class="event-day">Sun., Dec. 28, 2014</span>
+                                    <span class="event-time">
+                                        2:25 PM MST</span>
+                                </span>
+                                <span class="event-details">
+                                    <span class="event-type"></span>
+                                    <span class="event-title">
+                                        <a href="http://www.denverbroncos.com/schedule-and-events/event/Denver-Broncos-vs.-Oakland-Raiders-201412281425/cc6bce52-8272-417c-983e-24ce7b70820b" title="Denver Broncos vs. Oakland Raiders"><span>Denver Broncos vs. Oakland Raiders</span></a>
+                                            </span>
+                                    <span class="event-description">The Denver Broncos host the Oakland Raiders for the final regular-season game of the 2014 season. The game will be broadcast on CBS.</span>
+                                </span>
+                            </li>
+                        </ul>
+        </div>
+        <div class="action-bar">
+            <span class="event-details">
+                <a href="http://www.denverbroncos.com/schedule-and-events/events-calendar.html" title="View More Events">
+                    <span>View More Events <span class="link-carets">»</span></span>
+                </a>
+            </span>
+        </div>
+    </div>
+</div>

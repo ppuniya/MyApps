@@ -1,0 +1,33 @@
+<% if boardlist %>
+	<div class="panel-body">
+		<%= boardlist.list.description %>
+	</div>
+	<div class="table-responsive">
+	<table class="table table-bordered">
+		<tbody>
+		<tr>
+			<td class="active"><strong>List Type</strong></td>
+			<td><%= boardlist.list.listtype == "shop" ? "Shopping List" : "Task Management" %></td>
+		</tr>
+		<tr>
+			<td class="active"><strong>List Admins</strong></td>
+			<td><ul class="list-inline">
+				<% boardlist.list.adminusers.each do |u| %>
+					<li><span class="bg-danger"><%= u.fullname%></span></li>
+				<% end %>
+			</ul></td>
+		</tr>
+		<% if boardlist.list.memberusers.count > 0 %>
+			<tr>
+				<td class="active"><strong>List Members</strong></td>
+				<td><ul class="list-inline">
+					<% boardlist.list.memberusers.each do |u| %>
+						<li><span class="bg-info"><%= u.fullname %></span></li>
+					<% end%>
+				</ul></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+	</div>
+<% end %>

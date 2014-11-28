@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gameid: 1
+  weather: MyString
+  media: MyString
+  yl: MyString
+  qtr: MyString
+  note: MyString
+  down: 1
+  togo: 1
+  redzone: false
+  clock: 2014-11-20 11:46:04
+  posteam: MyString
+  stadium: MyString
+
+two:
+  gameid: 1
+  weather: MyString
+  media: MyString
+  yl: MyString
+  qtr: MyString
+  note: MyString
+  down: 1
+  togo: 1
+  redzone: false
+  clock: 2014-11-20 11:46:04
+  posteam: MyString
+  stadium: MyString

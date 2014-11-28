@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  perms: MyString
+  listposition: 1
+  board_id: 1
+  list_id: 1
+
+two:
+  perms: MyString
+  listposition: 1
+  board_id: 1
+  list_id: 1

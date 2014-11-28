@@ -1,0 +1,2 @@
+jQuery("#newshoppingitems").html("<%= escape_javascript(render :partial=>'shoppingitem_update', :locals=>{:shoppingitems=>@shoppingitems})%>");
+jQuery("#newshoppingitems").hide().fadeIn('fast');

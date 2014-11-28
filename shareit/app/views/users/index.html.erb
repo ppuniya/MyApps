@@ -1,0 +1,46 @@
+<%= render :partial=>"navviews/universalnav", :locals=>{navstat: "li"}%>
+
+<div class="page-header">
+	<h1>Welcome to ShareIt!</h1>
+</div>
+
+<div class="row">
+	<div class="col-sm-<%= current_user ? "8" : "12" %>">
+		<p>ShareIt gives a natural way to share lists between you and your contacts. Use the lists at ShareIt for:</p>
+		<ul>
+			<li>Shared shopping lists</li>
+			<li>Team task management</li>
+			<li>...</li>
+		</ul>
+	<% if current_user %>
+		<p>Check out your boards <%= link_to "now!", {:controller=>'boards', :action=>'index'} %></p>
+	<% else %>
+		<p><%= link_to "Sign up", {:controller=>'users', :action=>'new'}%> today to start using ShareIt!</p>
+	<% end %>
+	</div>
+	<% if current_user %>
+	<div class="col-sm-4">
+		<% if @user.friendships.count > 0 %>
+			<h4>Your Contacts</h4>
+		<% else %>
+			<h4>Currently, you don't have any contacts</h4>
+		<% end %>
+			<ul class="list-group">
+				<% @friendrequests.each do |f| %>
+					<li class="list-group-item list-group-item-success">
+						<%= f.user.fullname %>
+						<span class="label pull-right"><%= link_to raw('<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>'), {:controller=>"friendships", :action=>"accept", :id=>f.id}, :method=>:post, :title=>"Accept contact request" %></span>
+						<span class="label pull-right"><%= link_to raw('<span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>'), {:controller=>"friendships", :action=>"reject", :id=>f.id}, :method=>:post, :title=>"Reject contact request" %></span>
+					</li>
+				<% end %>
+				<% @user.friendships.each do |f| %>
+					<li class="list-group-item">
+						<%= f.friend.fullname %>
+						<span class="label pull-right"><%= link_to raw('<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>'), f, :method=>:delete , :data=>{:confirm=>"Are you sure about deleting this contact?"}%></span>
+					</li>
+				<% end %>
+			</ul>
+			<p class="text-center"><%= link_to "Manage Contacts", {controller: 'users', action: 'findcontacts'}, class: "btn btn-primary"%></p>
+	</div>
+	<% end %>
+</div>

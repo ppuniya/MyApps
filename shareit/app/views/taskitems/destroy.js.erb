@@ -1,0 +1,2 @@
+jQuery("#newtaskitems").html("<%= escape_javascript(render partial: 'taskitem_update', :locals=>{:taskitems=>@taskitems})%>");
+jQuery("#newtaskitems").hide().fadeIn('fast');

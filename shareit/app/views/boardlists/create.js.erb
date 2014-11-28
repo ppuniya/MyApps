@@ -1,0 +1,2 @@
+jQuery("#list_allusers").append("<%= escape_javascript(render partial: 'boardlistcreated', :locals=>{:blist=>@boardlist})%>");
+jQuery("#list_allusers").hide().fadeIn('fast');

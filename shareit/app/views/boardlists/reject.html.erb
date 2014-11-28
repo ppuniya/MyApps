@@ -1,0 +1,12 @@
+<div id="listactionnotice" class="alert alert-warning">
+<h2>List deactivated!</h2>
+</div>
+
+<div id="listgobacklinks" class="row">
+<div class="col-sm-offset-1 col-sm-1">
+<%= link_to "Back to your boards", {:controller=>"boards", :action=>"index"}, :title=>"Go back to your boards", :class=>"btn btn-primary"%>
+</div>
+<div class="col-sm-offset-7 col-sm-1">
+<%= link_to "View this list", {:controller=>"lists", :action=>"show", :id=>@list.id}, :title=>"View this list", :class=>"btn btn-primary"%>
+</div>
+</div>

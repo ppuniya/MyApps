@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  details: MyString
+  unitcost: 1.5
+  quantity: 1.5
+  unittype: MyString
+  list_id: 
+
+two:
+  name: MyString
+  details: MyString
+  unitcost: 1.5
+  quantity: 1.5
+  unittype: MyString
+  list_id: 

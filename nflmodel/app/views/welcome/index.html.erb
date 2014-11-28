@@ -1,0 +1,8 @@
+<h1>Welcome#index</h1>
+<form action = "welcome/storegame" method="post">
+    Game Date one: <input type = "text" size = "10" name = "game_str" />
+    Game Date two: <input type = "text" size = "10" name = "game_strnext" />
+	        <input type = "submit" value="Search" />
+			<input type = "reset" value="Reset Form" />
+</form>
+<%= link_to "Fetch All Rosters", {:controller=>"welcome", :action=>"fetchrosters"} %>

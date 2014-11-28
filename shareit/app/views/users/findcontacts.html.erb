@@ -1,0 +1,58 @@
+<%= render :partial=>"navviews/universalnav", :locals=>{navstat: "li"}%>
+
+<div class="page-header">
+	<h1><%= current_user.fname%>'s Contacts</h1>
+</div>
+
+<div class="row">
+	<div class="col-sm-8">
+		<% if @friendships.count == 0 %>
+			<p class="lead">You do not have any contacts currently</p>
+		<% end %>
+		<div class="row">
+			<% if @friendrequests.count >0 %>
+				<div class="col-sm-3">
+					<p>Pending contact requests:</p>
+				</div>
+				<div class="col-sm-5">
+					<ul class="list-inline list-group">
+						<% @friendrequests.each do |f| %>
+						<li class="list-group-item list-group-item-success">
+						<%= f.user.fullname %>
+						<span class="label pull-right"><%= link_to ('<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>').html_safe, {:controller=>"friendships", :action=>"accept", :id=>f.id}, :method=>:post, :title=>"Accept contact request"%></span>
+						<span class="label pull-right"><%= link_to ('<span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>').html_safe, {:controller=>"friendships", :action=>"reject", :id=>f.id}, :method=>:post , :title=>"Reject contact request"%></span>
+						</li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+			<% if @friendships.count >0 %>
+				<div class="col-sm-3">
+					<p>Current contacts:</p>
+				</div>
+				<div class="col-sm-5">
+					<ul class="list-inline list-group">
+						<% @friendships.each do |f| %>
+							<li class="list-group-item">
+								<%= f.friend.fullname %>
+								<span class="label pull-right"><%= link_to ('<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>').html_safe, f, :method=>:delete, :data=>{:confirm=>"Are you sure about deleting this contact?"} %></span>
+							</li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+		</div>
+	</div>
+	<div class="col-sm-4">
+	<h4>Add a contact from the following users</h4>
+	<ul class="list-group">
+		<% @users.each do |u| %>
+			<li class="list-group-item">
+				<%= u.fullname %>
+				<span class="label pull-right"><%= link_to ('<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>').html_safe, friendships_path(:friend_id => u.id), :method=>:post, :title=>"Add to Contacts" %></span>
+			</li>
+		<% end %>
+	</ul>
+	</div>
+</div>
+

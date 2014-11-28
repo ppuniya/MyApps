@@ -1,0 +1,25 @@
+<% if shoppingitems %>
+	<div class="col-sm-offset-1 col-sm-10">
+	<table id="newshoppingitems" class="table table-striped table-hover">
+		<thead>
+			<tr>
+			<th>Name</th>
+			<th>Details</th>
+			<th>Quantity</th>
+			<th>Unit Type</th>
+			<th>Unit Cost</th>
+			<th>Best Price Found</th>
+			<th> Best Price Store</th>
+			<th>Update/Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+		<% shoppingitems.each do |it| %>
+			<tr id="shoppingitem_<%=it.id%>" class="shopping_item">
+				<%= render :partial=>"/shoppingitems/shoppingitem", :locals=>{:item=>it}%>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+	</div>
+<% end %>

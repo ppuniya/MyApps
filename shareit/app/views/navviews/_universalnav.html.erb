@@ -1,0 +1,11 @@
+<% content_for :menu do %>
+	<% if navstat == "nli" %>
+		<li><%= link_to "Log In", log_in_url, :title=>"Existing user? Log in here" %></li>
+		<li><%= link_to "Sign Up", sign_up_url, :title=>"Sign up today!"%></li>
+	<% else %>
+		<li><%= link_to "Log Out", log_out_url, data: {:confirm=>"Do you want to log out?"}%></li>
+		<li><%= link_to "Contacts", {:controller=>"users", :action=> "findcontacts"}, :title=>"Manage your contacts" %></li>
+		<li><%= link_to "Boards", {:controller=>"boards", :action=>"index"}, :title=>"Manage your Lists" %></li>
+		<li><%= link_to "Home", {:controller=>"users", :action=>"index"}, :title=>"Your home screen" %></li>
+	<% end %>
+<% end %>

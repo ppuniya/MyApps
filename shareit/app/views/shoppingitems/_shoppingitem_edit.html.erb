@@ -1,0 +1,25 @@
+<%= form_for @shoppingitem, as: :shoppingitem, :url=>{:controller=>"shoppingitems", :action=>"update"}, :remote=>true, :method=>:patch, :html=>{:role=>"form"} do |item| %>
+	<table class="table table-hover">
+		<thead>
+		<tr>
+			<th><%= item.label "Name", :class="control-label" %></th>
+			<th><%= item.label "Details", :class="control-label" %></th>
+			<th><%= item.label "Quantity", :class="control-label" %></th>
+			<th><%= item.label "Unit Type", :class="control-label" %></th>
+			<th><%= item.label "Unit Cost"", :class="control-label" %></th>
+			<th></th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td><%= item.text_field :name, :class=>"form-control"%></td>
+			<td><%= item.text_field :details, :class=>"form-control"%></td>
+			<td><%= item.text_field :quantity, :class=>"form-control"%></td>
+			<td><%= item.select(:unitcost, Shoppingitem::UNIT_TYPES, {:prompt=>"Item Units"}, {:class=>"form-control"})%></td>
+			<td><%= item.text_field :unitcost, :class=>"form-control"%></td>
+			<td><%= item.hidden_field :id %>
+				<%= submit_tag("Submit", :class=>"btn btn-warning") %></td>
+		</tr>
+		</tbody>
+	</table>
+<% end %>

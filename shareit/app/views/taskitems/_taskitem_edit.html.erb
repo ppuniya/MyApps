@@ -1,0 +1,21 @@
+<%= form_for @taskitem, :as=>:taskitem, :url=>{:controller=>"taskitems", :action=>"update"}, :remote=>true, :method=>:patch, :role=>"form" do |item|%>
+		<table class="table table-hover">
+			<thead>
+			<tr>
+				<th><%= item.label "Title", :class=>"control-label" %></th>
+				<th><%= item.label "Description", :class=>"control-label" %></th>
+				<th><%= item.label "Due Date", :class=>"control-label" %></th>
+				<th></th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><%= item.text_field :title, :class=>"form-control"%></td>
+				<td><%= item.text_field :description, :class=>"form-control"%></td>
+				<td><%= item.datetime_select(:duedate, prompt: true, :class=>"form-control")%></td>
+				<td><%= item.hidden_field :id%>
+					<%= submit_tag("Edit", :class=>"btn btn-warning") %></td>
+			</tr>
+			</tbody>
+		</table>
+	<% end %>

@@ -1,0 +1,13 @@
+<thead>
+<tr>
+	<th>Title</th>
+	<th>Description</th>
+	<th>Due Date</th>
+	<th>Edit/Delete/Volunteer?</th>
+</tr>
+</thead>
+<% taskitems.each do |it| %>
+	<tr id="taskitem_<%=it.id%>">
+		<%= render :partial=>"/taskitems/taskitem", :locals=>{:item=>it} %>
+	</tr>
+<% end %>

@@ -1,0 +1,2 @@
+jQuery("#listbox").html("<%= escape_javascript(render partial: '/boardlists/boardlists', locals: {list: @list, board: @board, reqtype: @reqtype})%>").fadeTo("slow", 1, function(){});
+jQuery("#listdetails").fadeTo("slow", 0.25, function(){});

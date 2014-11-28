@@ -1,0 +1,69 @@
+<% if current_user %>
+<%= render :partial=>"navviews/universalnav", :locals=>{navstat: "li"}%>
+<% else %>
+<%= render :partial=>"navviews/universalnav", :locals=>{navstat: "nli"}%>
+<% end %>
+
+<div class="page-header">
+<h1>Sign Up to ShareIt</h1>
+</div>
+
+<%= form_for @user do |f| %>
+	<% if @user.errors.any? %>
+		<div id="error_expl" class="panel panel-danger">
+			<div class="panel-heading">
+				<h3 class="panel-title">Sign up failed due to <%= pluralize(@user.errors.count, "error") %></h3>
+			</div>
+			<div class="panel-body">
+				<ul>
+					<% @user.errors.full_messages.each do |message| %>
+						<li><%= message %></li>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+	<% end %>
+	
+	<div class="form-group row">
+		<%= f.label "First Name", :class=>"col-sm-2 control-label"%>
+		<div class="col-sm-6">
+			<%= f.text_field :fname, :class=>'form-control' %></td>
+		</div>
+	</div>
+	
+	<div class="form-group row">
+		<%= f.label "Last Name", :class=>"col-sm-2 control-label"%>
+		<div class="col-sm-6">
+			<%= f.text_field :lname, :class=>'form-control' %></td>
+		</div>
+	</div>
+	
+	<div class="form-group row">
+		<%= f.label :email, :class=>"col-sm-2 control-label"%>
+		<div class="col-sm-6">
+			<%= f.text_field :email, :class=>'form-control' %></td>
+		</div>
+	</div>
+		
+	<div class="form-group row">
+		<%= f.label :password, :class=>"col-sm-2 control-label"%>
+		<div class="col-sm-6">
+			<%= f.password_field :password, :class=>'form-control' %></td>
+		</div>
+	</div>
+	
+	<div class="form-group row">
+		<%= f.label :password_confirmation, :class=>"col-sm-2 control-label"%>
+		<div class="col-sm-6">
+			<%= f.password_field :password_confirmation, :class=>'form-control' %></td>
+		</div>
+	</div>
+
+	<div class="form-group row">
+		<div class="col-sm-offset-2 col-sm-10">
+			<%= f.submit "Submit", {:class=>"btn btn-primary"}%>
+			<%= link_to t('.cancel', :default=>t("helpers.links.cancel")),
+				root_url, :class=> 'btn btn-default' %>
+		</div>
+	</div>
+<% end %>

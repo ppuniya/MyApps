@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  duedate: 2014-11-13 19:30:39
+  volunteer_id: 1
+  list_id: 
+
+two:
+  title: MyString
+  description: MyString
+  duedate: 2014-11-13 19:30:39
+  volunteer_id: 1
+  list_id: 

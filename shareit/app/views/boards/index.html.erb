@@ -1,0 +1,48 @@
+<% if current_user %>
+<%= render :partial=>"navviews/universalnav", :locals=>{navstat: "li"}%>
+<% else %>
+<%= render :partial=>"navviews/universalnav", :locals=>{navstat: "nli"}%>
+<% end %>
+
+<div class="page-header">
+	<h1><%= @user.fname%>'s boards</h1>
+</div>
+<div id="boards_tabs" role="tabpanel">
+	<ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active"><a href="#prioritylists" aria-controls="prioritylists" role="tab" data-toggle="tab">
+		<%= @priorityboard.title %>&nbsp; &nbsp; &nbsp;<span class="label label-<%= @priorityboard.lists.count > 0 ? "danger" : "info"%>"><%= @priorityboard.lists.count %></span></a></li>
+		<li role="presentation"><a href="#pendinglists" aria-controls="pendinglists" role="tab" data-toggle="tab">
+			<%= @pendingboard.title %>&nbsp; &nbsp; &nbsp;<span class="label label-<%= @pendingboard.lists.count > 0 ? "danger" : "info"%>"><%= @pendingboard.lists.count %></span></a></li>
+		<li role="presentation"><a href="#inactivelists" aria-controls="inactivelists" role="tab" data-toggle="tab">
+		<%= @inactiveboard.title %>&nbsp; &nbsp; &nbsp;<span class="label label-<%= @inactiveboard.lists.count > 0 ? "danger" : "info"%>"><%= @inactiveboard.lists.count %></span></a></li>
+	</ul>
+
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane active" id="prioritylists">
+			<p class="lead"><%= @priorityboard.description %></p>
+			<% if @priorityboard.lists.count > 0 %>
+				<%= render :partial=>"lists", :locals=>{:boardlists=>@priorityboard.boardlists.order("listposition"), :board_id=>@priorityboard.id} %>
+			<% else %>
+				<p>You have no active lists</p>
+			<% end %>
+		</div>
+		<div role="tabpanel" class="tab-pane" id="pendinglists">
+			<p class="lead"><%= @pendingboard.description %></p>
+			<% if @pendingboard.lists.count > 0 %>
+				<%= render :partial=>"lists", :locals=>{:boardlists=>@pendingboard.boardlists.order("listposition"), :board_id=>@pendingboard.id} %>
+			<% else %>
+				<p>You have no pending lists</p>
+			<% end %>
+		</div>
+		<div role="tabpanel" class="tab-pane" id="inactivelists">
+			<p class="lead"><%= @inactiveboard.description %></p>
+			<% if @inactiveboard.lists.count > 0 %>
+				<%= render :partial=>"lists", :locals=>{:boardlists=>@inactiveboard.boardlists.order("listposition"), :board_id=>@inactiveboard.id}%>
+			<% else %>
+				<p>You have no inactive lists</p>
+			<% end %>
+		</div>
+	</div>
+</div>
+<hr>
+<div class="text-center"><%= link_to "Start new list", {:controller=>"lists", :action=>"new"}, :class=>"btn btn-primary"%></div>

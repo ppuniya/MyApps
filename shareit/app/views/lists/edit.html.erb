@@ -1,0 +1,40 @@
+<%= render :partial=>"navviews/universalnav", :locals=>{navstat: "li"}%>
+
+<div "page-header">
+<h1>Modify List</h1>
+</div>
+
+<div class="row">
+	<div id="listdetails" class="col-sm-4" style="border-right: 1px solid #ccc;">
+		<h4 class="lead">List Details</h4>
+		<hr>
+		<%= form_for @list, :as=>:list, :url=>{:action=>"update"}, :remote=>true do |l|%>
+			<div class="form-group">
+			<%= l.label "List Type", :class=>"control-label" %>
+			<%= l.select(:listtype, List::LIST_TYPES , {:prompt=>true}, {:class=>"form-control"})%></p>
+			</div>
+			
+			<div class="form-group">
+			<%= l.label "List Title", :class=>"control-label" %>
+			<%= l.text_field :title, :class=>"form-control" %>
+			</div>
+			
+			<div class="form-group">
+			<%= l.label "List Description", :class=>"control-label" %>
+			<%= l.text_area :description, :class=>"form-control" %>
+			</div>
+
+			<div class="form-group">
+			<%= l.hidden_field :id %>
+			<%= l.submit "Modify list members", {:class=>"btn btn-primary"} %>
+			</div>
+		<% end %>
+	</div>
+	<div id="listbox" class="col-sm-8">
+	</div>
+</div>
+<hr>
+<div class="text-center">
+	<%= link_to "View this List", {:controller=>"lists", :action=>"show", :id=>@list.id}, class: "btn btn-default"%>
+	<%= link_to "Done with List", {:controller=>"boards", :action=>"index"}, class: "btn btn-default"%>
+</div>

@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_id: 
+  team_id: 
+  teamtype: MyString
+  q1: 1
+  q2: 1
+  q3: 1
+  q4: 1
+  q5: 1
+  total: 1
+  to: 1
+  totfd: 1
+  totyds: 1
+  pyds: 1
+  ryds: 1
+  pen: 1
+  penyds: 1
+  trnovr: 1
+  pt: 1
+  ptyds: 1
+  ptavg: 1
+  top: 2014-11-20 11:50:41
+
+two:
+  game_id: 
+  team_id: 
+  teamtype: MyString
+  q1: 1
+  q2: 1
+  q3: 1
+  q4: 1
+  q5: 1
+  total: 1
+  to: 1
+  totfd: 1
+  totyds: 1
+  pyds: 1
+  ryds: 1
+  pen: 1
+  penyds: 1
+  trnovr: 1
+  pt: 1
+  ptyds: 1
+  ptavg: 1
+  top: 2014-11-20 11:50:41
